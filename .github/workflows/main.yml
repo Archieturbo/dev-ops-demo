@@ -9,4 +9,12 @@ jobs:
     steps: 
         - uses: actions/checkout@v4
         - run: pwd
-        - run: ls
+        - name: List files
+  build-project:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-dotnet@v4.1.0
+      with: 
+        dotnet-version: 9
+    - name: Build project
+        
